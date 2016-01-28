@@ -6,6 +6,7 @@ use_frameworks!
 target 'nowPlaying' do
 
 pod 'AFNetworking'
+pod 'MBProgressHUD'
 
 end
 
