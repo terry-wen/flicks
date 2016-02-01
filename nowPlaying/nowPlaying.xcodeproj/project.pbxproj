@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		573C5E8EA429CEA13D3D7563 /* Pods_nowPlaying.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A993C38022029ED40E5DA8 /* Pods_nowPlaying.framework */; };
+		F61B9B051C601B67006486E8 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F61B9B041C601B67006486E8 /* DetailViewController.swift */; };
 		F6312F061C5C2D8600024F66 /* noun_185139_cc.png in Resources */ = {isa = PBXBuildFile; fileRef = F6312F051C5C2D8600024F66 /* noun_185139_cc.png */; };
 		F6C5FC721C3F55F5001115DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C5FC711C3F55F5001115DF /* AppDelegate.swift */; };
 		F6C5FC771C3F55F5001115DF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6C5FC751C3F55F5001115DF /* Main.storyboard */; };
@@ -21,6 +22,7 @@
 		84A993C38022029ED40E5DA8 /* Pods_nowPlaying.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_nowPlaying.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9520F228808FB3994D22733E /* Pods-nowPlaying.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nowPlaying.release.xcconfig"; path = "Pods/Target Support Files/Pods-nowPlaying/Pods-nowPlaying.release.xcconfig"; sourceTree = "<group>"; };
 		C1F4F2BFC68268931F977E27 /* Pods-nowPlaying.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nowPlaying.debug.xcconfig"; path = "Pods/Target Support Files/Pods-nowPlaying/Pods-nowPlaying.debug.xcconfig"; sourceTree = "<group>"; };
+		F61B9B041C601B67006486E8 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		F6312F051C5C2D8600024F66 /* noun_185139_cc.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = noun_185139_cc.png; sourceTree = SOURCE_ROOT; };
 		F6C5FC6E1C3F55F5001115DF /* nowPlaying.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nowPlaying.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6C5FC711C3F55F5001115DF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				F6C5FC831C3F5673001115DF /* MoviesViewController.swift */,
+				F61B9B041C601B67006486E8 /* DetailViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -236,6 +239,7 @@
 				F6C5FC721C3F55F5001115DF /* AppDelegate.swift in Sources */,
 				F6C5FC841C3F5673001115DF /* MoviesViewController.swift in Sources */,
 				F6C5FC871C3F5CF7001115DF /* MovieCell.swift in Sources */,
+				F61B9B051C601B67006486E8 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
