@@ -99,38 +99,46 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="pkz-8s-TF7">
-                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <view alpha="0.80000000000000004" contentMode="scaleToFill" id="plX-NS-pas">
-                                <rect key="frame" x="0.0" y="328" width="320" height="240"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="Q5n-a5-Rig">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="R2P-Vd-SqA">
-                                        <rect key="frame" x="8" y="8" width="304" height="24"/>
+                                    <view alpha="0.80000000000000004" contentMode="scaleToFill" id="plX-NS-pas">
+                                        <rect key="frame" x="0.0" y="503" width="320" height="240"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Overview" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2ad-Cn-adp">
-                                        <rect key="frame" x="8" y="32" width="304" height="200"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="R2P-Vd-SqA">
+                                                <rect key="frame" x="8" y="8" width="304" height="24"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Overview" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2ad-Cn-adp">
+                                                <rect key="frame" x="8" y="32" width="304" height="19"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="pkz-8s-TF7">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="503"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    </imageView>
                                 </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="gt2-Ig-aL9"/>
                     <connections>
+                        <outlet property="infoView" destination="plX-NS-pas" id="4Tg-vg-IR3"/>
                         <outlet property="overviewLabel" destination="2ad-Cn-adp" id="QFC-a0-dKU"/>
                         <outlet property="posterImageView" destination="pkz-8s-TF7" id="PpZ-8Q-WID"/>
+                        <outlet property="scrollView" destination="Q5n-a5-Rig" id="Gjf-Br-7IE"/>
                         <outlet property="titleLabel" destination="R2P-Vd-SqA" id="6cH-0N-WDh"/>
                     </connections>
                 </viewController>
@@ -141,7 +149,7 @@
         <!--Navigation Controller-->
         <scene sceneID="fgN-J0-aiZ">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zQx-04-Ms0" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="MoviesNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="zQx-04-Ms0" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="7bf-vK-aAx">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>

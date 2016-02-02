@@ -20,10 +20,12 @@ class MoviesViewController: UIViewController, UICollectionViewDataSource, UIColl
     
     var data: [NSDictionary]?
     var movies: [NSDictionary]?
+    var refreshControl: UIRefreshControl!
+    var endpoint: String!
     
     func refresh(sender: UITapGestureRecognizer) {
         let apiKey = "a07e22bc18f5cb106bfe4cc1f83ad8ed"
-        let url = NSURL(string:"https://api.themoviedb.org/3/movie/now_playing?api_key=\(apiKey)")
+        let url = NSURL(string:"https://api.themoviedb.org/3/movie/\(endpoint)?api_key=\(apiKey)")
         let request = NSURLRequest(URL: url!)
         let session = NSURLSession(
             configuration: NSURLSessionConfiguration.defaultSessionConfiguration(),
@@ -61,7 +63,7 @@ class MoviesViewController: UIViewController, UICollectionViewDataSource, UIColl
     
     func refreshControlAction(refreshControl: UIRefreshControl) {
         let apiKey = "a07e22bc18f5cb106bfe4cc1f83ad8ed"
-        let url = NSURL(string:"https://api.themoviedb.org/3/movie/now_playing?api_key=\(apiKey)")
+        let url = NSURL(string:"https://api.themoviedb.org/3/movie/\(endpoint)?api_key=\(apiKey)")
         let request = NSURLRequest(URL: url!)
         let session = NSURLSession(
             configuration: NSURLSessionConfiguration.defaultSessionConfiguration(),
@@ -107,7 +109,7 @@ class MoviesViewController: UIViewController, UICollectionViewDataSource, UIColl
         
         //flowLayout.scrollDirection = UICollectionViewScrollDirection.Horizontal
         
-        let refreshControl = UIRefreshControl()
+        refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: "refreshControlAction:", forControlEvents: UIControlEvents.ValueChanged)
         collectionView.insertSubview(refreshControl, atIndex: 0)
         
@@ -116,7 +118,7 @@ class MoviesViewController: UIViewController, UICollectionViewDataSource, UIColl
         searchBar.delegate = self
         
         let apiKey = "a07e22bc18f5cb106bfe4cc1f83ad8ed"
-        let url = NSURL(string:"https://api.themoviedb.org/3/movie/now_playing?api_key=\(apiKey)")
+        let url = NSURL(string:"https://api.themoviedb.org/3/movie/\(endpoint)?api_key=\(apiKey)")
         let request = NSURLRequest(URL: url!)
         let session = NSURLSession(
             configuration: NSURLSessionConfiguration.defaultSessionConfiguration(),
