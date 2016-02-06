@@ -12,5 +12,17 @@ class MovieCell: UICollectionViewCell {
     
     @IBOutlet weak var ratingLabel: UILabel!
     @IBOutlet weak var posterView: UIImageView!
+    @IBOutlet weak var dimView: UIView!
+    
+    override var highlighted: Bool {
+        didSet {
+            if self.highlighted {
+                dimView.hidden = false
+            }
+            else {
+                dimView.hidden = true
+            }
+        }
+    }
 
 }

@@ -38,6 +38,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController = tabBarController
         window?.makeKeyAndVisible()
         
+        nowPlayingNavigationController.navigationBar.barTintColor = UIColor.blackColor()
+        nowPlayingNavigationController.navigationBar.tintColor = UIColor.whiteColor()
+        nowPlayingNavigationController.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
+        
+        topRatedNavigationController.navigationBar.barTintColor = UIColor.blackColor()
+        topRatedNavigationController.navigationBar.tintColor = UIColor.whiteColor()
+        topRatedNavigationController.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
+        
+        tabBarController.tabBar.barTintColor = UIColor.blackColor()
+        tabBarController.tabBar.tintColor = UIColor.whiteColor()
+        
+        UIApplication.sharedApplication().statusBarStyle = .LightContent
+        
         return true
     }
 

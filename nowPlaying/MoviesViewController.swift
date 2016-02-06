@@ -101,6 +101,10 @@ class MoviesViewController: UIViewController, UICollectionViewDataSource, UIColl
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        searchBar.placeholder = "Search"
+        let leftNavBarButton = UIBarButtonItem(customView:searchBar)
+        self.navigationItem.leftBarButtonItem = leftNavBarButton
+        
         errorImageView.image = UIImage(named: "noun_185139_cc")
         netErrorView.hidden = true
         
@@ -166,6 +170,12 @@ class MoviesViewController: UIViewController, UICollectionViewDataSource, UIColl
         }
     }
     
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        collectionView.deselectItemAtIndexPath(indexPath, animated: true)
+    }
+    
+    
+    
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("MovieCell", forIndexPath: indexPath) as! MovieCell
         
@@ -206,6 +216,8 @@ class MoviesViewController: UIViewController, UICollectionViewDataSource, UIColl
         ]
         
         cell.ratingLabel.attributedText = NSAttributedString(string: rating, attributes: strokeTextAttributes)
+        
+        cell.highlighted = false
         
         //cell.ratingLabel.layer.borderWidth = 1
         //cell.ratingLabel.layer.borderColor = UIColor.whiteColor().CGColor
